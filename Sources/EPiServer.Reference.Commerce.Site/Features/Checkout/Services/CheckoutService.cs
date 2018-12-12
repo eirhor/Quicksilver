@@ -149,10 +149,11 @@ namespace EPiServer.Reference.Commerce.Site.Features.Checkout.Services
                     validation = AnonymousPurchaseValidation;
                 }
 
-                if (!validation.ValidateOrderOperation(modelState,  _cartService.RequestInventory(cart)))
-                {
-                    return null;
-                }
+                // DEMO: cant request inventory since database is not writable
+                //if (!validation.ValidateOrderOperation(modelState,  _cartService.RequestInventory(cart)))
+                //{
+                //    return null;
+                //}
 
                 var orderReference = _orderRepository.SaveAsPurchaseOrder(cart);
                 var purchaseOrder = _orderRepository.Load<IPurchaseOrder>(orderReference.OrderGroupId);

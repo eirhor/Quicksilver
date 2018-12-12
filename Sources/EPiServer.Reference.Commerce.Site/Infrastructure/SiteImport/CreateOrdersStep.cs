@@ -57,7 +57,8 @@ namespace EPiServer.Reference.Commerce.Site.Infrastructure.SiteImport
             {
                 _progressMessenger.AddProgressMessageText("Creating customers and orders...", false, 0);
 
-                CreateContactsAndOrders();
+                //DEMO: not needed for demo
+                //CreateContactsAndOrders();
 
                 return true;
             }

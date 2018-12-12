@@ -10,7 +10,9 @@ namespace EPiServer.Reference.Commerce.Site.Infrastructure.Attributes
 
         public override bool IsValidForRequest(ControllerContext controllerContext, System.Reflection.MethodInfo methodInfo)
         {
-            return DBMode.Service != null && DBMode.Service.DatabaseMode != DatabaseMode.ReadOnly;
+            //DEMO: allows UI to allow adding to cart and placing orders
+            return true;
+            //return DBMode.Service != null && DBMode.Service.DatabaseMode != DatabaseMode.ReadOnly;
         }
     }
 }

@@ -16,7 +16,9 @@ namespace EPiServer.Reference.Commerce.Site.Infrastructure.Attributes
                 viewResult.ViewData["IsReadOnly"] = false;
                 if (_databaseMode.Service != null)
                 {
-                    viewResult.ViewData["IsReadOnly"] = _databaseMode.Service.DatabaseMode == DatabaseMode.ReadOnly;
+                    // DEMO: allows UI to allow adding to cart and placing orders
+                    viewResult.ViewData["IsReadOnly"] = false;
+                    //viewResult.ViewData["IsReadOnly"] = _databaseMode.Service.DatabaseMode == DatabaseMode.ReadOnly;
                 }
             }
 
